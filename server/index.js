@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.static("./dist"));
-app.get("/data",(req,res)=> res .json({msg: "sucess"}));
+app.get("/data",(req,res)=> res .json({msg: "you are hacked"}));
 //Routers
 app.all("/*",(req,res) => res.sendFile(path.resolve("./dist/index.html")));
 app.listen(process.env.VITE_PORT,error => {
