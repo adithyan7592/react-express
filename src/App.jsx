@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import axios from 'axios'
+import Button from '@mui/material/Button';
+
 
 if(import.meta.env.DEV){
   axios.defaults.baseURL=`http://localhost:${import.meta.env.VITE_PORT}`
@@ -18,7 +20,17 @@ function App() {
  },[])
   return (
     <>
-    <h1>{data.msg}</h1>
+    <div className='main'>
+    <div className='sub'> 
+    <h1 className='what'>I AM A HACKER </h1>
+    <p className='super'>your phone is hacked</p>
+    </div>
+  
+    <div className='hacked'>
+    <h1 className='text'>{data.msg}</h1>
+    <Button variant="contained">click to escape</Button>
+    </div>
+    </div>
     </>
   )
 }
